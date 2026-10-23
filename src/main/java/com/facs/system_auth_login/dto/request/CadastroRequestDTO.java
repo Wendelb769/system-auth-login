@@ -1,4 +1,4 @@
-package com.facs.system_auth_login.dto;
+package com.facs.system_auth_login.dto.request;
 
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.br.CPF;
