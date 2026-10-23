@@ -1,7 +1,7 @@
 package com.facs.system_auth_login.controller;
 
-import com.facs.system_auth_login.dto.CadastroRequestDTO;
-import com.facs.system_auth_login.dto.CadastroResponseDTO;
+import com.facs.system_auth_login.dto.request.CadastroRequestDTO;
+import com.facs.system_auth_login.dto.response.CadastroResponseDTO;
 import com.facs.system_auth_login.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
