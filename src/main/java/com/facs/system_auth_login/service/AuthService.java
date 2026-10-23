@@ -1,7 +1,7 @@
 package com.facs.system_auth_login.service;
 
-import com.facs.system_auth_login.dto.CadastroRequestDTO;
-import com.facs.system_auth_login.dto.CadastroResponseDTO;
+import com.facs.system_auth_login.dto.request.CadastroRequestDTO;
+import com.facs.system_auth_login.dto.response.CadastroResponseDTO;
 import com.facs.system_auth_login.entity.UsuarioEntity;
 import com.facs.system_auth_login.entity.UsuarioRole;
 import com.facs.system_auth_login.exception.CpfJaCadastradoException;
