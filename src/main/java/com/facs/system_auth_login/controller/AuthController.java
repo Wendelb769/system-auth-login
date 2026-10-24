@@ -21,7 +21,7 @@ public class AuthController {
         this.authService = authService;
     }
 
-    @PostMapping("/cadastro")
+    @PostMapping("/register")
     public ResponseEntity<CadastroResponseDTO> cadastrar(@RequestBody @Valid CadastroRequestDTO cadastroRequestDTO){
         CadastroResponseDTO cadastroResponseDTO = authService.cadastrarNovoUsuario(cadastroRequestDTO);
 
