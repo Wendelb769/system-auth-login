@@ -5,6 +5,8 @@ import com.facs.system_auth_login.dto.response.ProcurarUsuarioResponseDTO;
 import com.facs.system_auth_login.entity.UsuarioEntity;
 import com.facs.system_auth_login.service.UsuarioService;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +24,8 @@ public class UsuarioController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity<List<UsuarioEntity>> listaUsuarios(){
-        return ResponseEntity.ok(usuarioService.buscarUsuarios());
+    public ResponseEntity<Page<UsuarioEntity>> listaUsuarios(Pageable pageable){
+        return ResponseEntity.ok(usuarioService.buscarUsuarios(pageable));
     }
 
     @GetMapping(path = "/find")
