@@ -3,6 +3,7 @@ package com.facs.system_auth_login.controller;
 import com.facs.system_auth_login.dto.request.CadastroRequestDTO;
 import com.facs.system_auth_login.dto.response.CadastroResponseDTO;
 import com.facs.system_auth_login.service.AuthService;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ public class AuthController {
         this.authService = authService;
     }
 
+    @Transactional
     @PostMapping("/register")
     public ResponseEntity<CadastroResponseDTO> cadastrar(@RequestBody @Valid CadastroRequestDTO cadastroRequestDTO){
         CadastroResponseDTO cadastroResponseDTO = authService.cadastrarNovoUsuario(cadastroRequestDTO);
