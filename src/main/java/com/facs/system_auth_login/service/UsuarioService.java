@@ -4,7 +4,8 @@ import com.facs.system_auth_login.dto.request.ProcurarUsuarioRequestDTO;
 import com.facs.system_auth_login.dto.response.ProcurarUsuarioResponseDTO;
 import com.facs.system_auth_login.entity.UsuarioEntity;
 import com.facs.system_auth_login.repository.UsuarioRepository;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class UsuarioService {
                 .toList();
     }
 
-    public List<UsuarioEntity> buscarUsuarios(){
-        return usuarioRepository.findAll();
+    public Page<UsuarioEntity> buscarUsuarios(Pageable pageable){
+        return usuarioRepository.findAll(pageable);
     }
 }
